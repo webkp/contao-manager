@@ -58,6 +58,12 @@ services:
             calls:
                 - [setContainer, ["@service_container"]]
 
+    contao_manager.controller.logs:
+            class: Contao\ManagerApi\Controller\LogController
+            arguments:
+                - "@kernel"
+                - "@filesystem"
+
     contao_manager.controller.tasks:
             class: Contao\ManagerApi\Controller\TaskController
             arguments:

@@ -6,4 +6,5 @@ export default {
     installCheck: { name: 'install-check' },
     packages: { name: 'packages' },
     packagesSearch: { name: 'packages-search' },
+    logViewer: { name: 'logs' },
 };

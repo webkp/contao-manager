@@ -124,6 +124,27 @@ task_status:
     defaults: { _controller: contao_manager.controller.tasks:putTaskStatus }
     methods:  [PUT]
 
+
+#################
+#   Log Files   #
+#################
+
+logs_list:
+    path:     /api/logs
+    defaults: { _controller: contao_manager.controller.logs:listFiles }
+    methods:  [GET]
+
+log_get:
+    path:     /api/logs/{filename}
+    defaults: { _controller: contao_manager.controller.logs:retrieveFile }
+    methods:  [GET]
+
+log_delete:
+    path:     /api/logs/{filename}
+    defaults: { _controller: contao_manager.controller.logs:deleteFile }
+    methods:  [DELETE]
+
+
 ###############
 #   Tenside   #
 ###############

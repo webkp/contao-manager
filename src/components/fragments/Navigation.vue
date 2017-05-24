@@ -7,6 +7,7 @@
                 <a>{{ 'ui.navigation.tools' | translate }}</a>
                 <ul>
                     <li><a href="/contao/install" target="_blank">{{ 'ui.navigation.installTool' | translate }}</a></li>
+                    <router-link tag="li" :to="routes.logViewer"><a>{{ 'ui.navigation.logViewer' | translate }}</a></router-link>
                 </ul>
             </li>
             <li>

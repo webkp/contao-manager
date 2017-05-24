@@ -9,6 +9,7 @@ import Install from '../components/Install';
 import Packages from '../components/packages/Base';
 import PackagesList from '../components/packages/List';
 import PackagesSearch from '../components/packages/Search';
+import LogViewer from '../components/tools/LogViewer';
 
 Vue.use(Router);
 
@@ -48,6 +49,12 @@ const router = new Router({
                     props: true,
                 },
             ],
+        },
+        {
+            name: routes.logViewer.name,
+            path: '/logs',
+            meta: { scope: scopes.MANAGER },
+            component: LogViewer,
         },
     ],
 });

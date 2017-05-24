@@ -108,6 +108,12 @@ export default {
         );
     },
 
+    getLogFiles() {
+        return Vue.http.get('api/logs').then(
+            response => (response.body),
+        );
+    },
+
     validateConstraint(constraint) {
         return Vue.http.post('api/constraint', { constraint }).then(
             response => response.body.status === 'OK',

@@ -1,7 +1,7 @@
 <template>
     <div>
         <loader v-if="packages === null">
-            <p>{{ 'ui.packagelist.loading' | translate }}</p>
+            <p>{{ 'ui.app.loading' | translate }}</p>
         </loader>
 
         <package v-for="(item, name) in packages" :name="name" :package="item" :key="name" :original="originals.get(name)" :changed="changes.get(name)" @change="changePackage"></package>
